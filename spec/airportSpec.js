@@ -12,4 +12,9 @@ describe("AirportChallenge", function () { //nom du project
     expect(airport.planes()).toContain(plane);
   });
 
+  it("plane can take off at airport", function () {
+    plane.takeOff(airport);
+    expect(airport.planes()).not.toContain(plane);
+  });
+
 });
